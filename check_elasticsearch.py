@@ -124,6 +124,20 @@ class ElasticAPI(object):
     def _exit_state(self, count):
         warning = int(self.args["<warning>"])
         critical = int(self.args["<critical>"])
+        
+        #
+        # special case
+        # critical == 0 and warning == 0
+        #
+        if critical == 0 and warning == 0 and count == 0:
+            message = message = "CRITICAL - 0 hits: {0} - must have hits| hits={0}".format(count)
+            print(message)
+            exit(2)
+        elif critical == 0 and warning == 0 and count > 0:
+            message = message = "OK - Total hits: {0} | hits={0}".format(count)
+            print(message)
+            exit(0)
+
         if count >= critical:
             if 'latest_message' in globals() or 'latest_message' in locals():
                 message = "CRITICAL - Total hits: {0} - Last message from: {2} [ {1} ] | hits={0}".format(count,\
