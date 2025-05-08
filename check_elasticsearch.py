@@ -119,7 +119,7 @@ class ElasticAPI(object):
         last_date = index
         if count > 0:
            last_message = latest_log['hits']['hits'][0]['_source']['message']
-           last_date = latest_log['hits']['hits'][0]['_source']['timestamp']
+           last_date = latest_log['hits']['hits'][0]['_source']['@timestamp']
         msg = [ last_date, last_message ]
         return count, msg
 
