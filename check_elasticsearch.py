@@ -30,9 +30,9 @@ Options:
 Original Author: Misiu Pajor
 Updated by: Sebastian Leung
 """
-__author__ = 'Misiu Pajor, OP5 AB'
-__date__ = '2017-10-02'
-__version__ = '0.6.2'
+__author__ = 'lduchosal'
+__date__ = '2025-05-22'
+__version__ = '0.6.3'
 
 
 try:
