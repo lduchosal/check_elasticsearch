@@ -66,11 +66,11 @@ class ElasticAPI(object):
         try:
             self.es = Elasticsearch(
                 [ self.url ],
-                basic_auth=(self.user, self.secret)
+                basic_auth=(self.user, self.secret),
                 # port=9200,
                 # scheme="https",
-                # ssl_show_warn=False,
-                # verify_certs=False
+                ssl_show_warn=False,
+                verify_certs=False
                 # sniff_on_start=False,
                 # timeout=60,
             )
