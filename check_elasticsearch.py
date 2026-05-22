@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.9
+#!/usr/local/bin/python3.11
 """Usage:
     check_elasticsearch.py --host <host> --user <esuser> --pass <espass> --index <index> --query <query> --gte <gte> --lte <lte> --warning <warning> --critical <critical> [--msgchars=<msgchars>] [--msgkey=<msgkey>] [--srckey=<srckey>]
     check_elasticsearch.py --host <host> --user <esuser> --pass <espass> --filter <query> --warning <warning> --critical <critical>
